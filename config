@@ -1,55 +1,185 @@
 [global_config]
   enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  inactive_color_offset = 1.0
   suppress_multiple_term_dialog = True
   window_state = maximise
-  inactive_color_offset = 1.0
 [keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = main
+      type = HPaned
+    [[[child2]]]
+      parent = main
+      type = HPaned
+    [[[main]]]
+      parent = window0
+      profile = default
+      type = VPaned
+    [[[terminal1]]]
+      command = cd ~/slam/slambook; zsh
+      order = 0
+      parent = child1
+      profile = default
+      type = Terminal
+    [[[terminal2]]]
+      command = ""
+      order = 1
+      parent = child1
+      position = 1000
+      profile = default
+      ratio = 0.3
+      type = Terminal
+    [[[terminal3]]]
+      command = cd ~/slam/slambook; zsh
+      order = 0
+      parent = child2
+      profile = default
+      type = Terminal
+    [[[terminal4]]]
+      command = exit; bash
+      order = 1
+      parent = child2
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      position = 170:0
+      type = Window
+  [[orbslam]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = cde0a7e9-b758-4cf0-88f3-27e371965a77
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 74:0
+      size = 1366, 871
+      title = aqiu@aqiu: ~/slam/slambook
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 654
+      ratio = 0.75519630485
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 681
+      ratio = 0.500367376929
+      type = HPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 327
+      ratio = 0.503852080123
+      type = VPaned
+    [[[terminal4]]]
+      command = cd ~/slam/ORB_SLAM; zsh
+      order = 0
+      parent = child3
+      profile = new
+      type = Terminal
+      uuid = cde0a7e9-b758-4cf0-88f3-27e371965a77
+    [[[terminal5]]]
+      command = cd ~/slam/ORB_SLAM; zsh
+      order = 1
+      parent = child3
+      profile = new
+      type = Terminal
+      uuid = cd8236a7-33f4-427a-b12e-19dd03e95ab5
+    [[[terminal6]]]
+      command = cd ~/slam/ORB_SLAM; zsh
+      order = 1
+      parent = child2
+      profile = new
+      type = Terminal
+      uuid = ec00ea68-13c7-4741-8e00-f59f577ea587
+    [[[terminal7]]]
+      command = cd ~/slam/ORB_SLAM; zsh
+      order = 1
+      parent = child1
+      profile = new
+      type = Terminal
+      uuid = 4869af4f-69c6-4fd0-9e84-55540ef06bbe
+  [[rovio_ws]]
+    [[[child0]]]
+      fullscreen = False
+      last_active_term = cde0a7e9-b758-4cf0-88f3-27e371965a77
+      last_active_window = True
+      maximised = True
+      order = 0
+      parent = ""
+      position = 74:0
+      size = 1366, 871
+      title = aqiu@aqiu: ~/slam/slambook
+      type = Window
+    [[[child1]]]
+      order = 0
+      parent = child0
+      position = 654
+      ratio = 0.75519630485
+      type = VPaned
+    [[[child2]]]
+      order = 0
+      parent = child1
+      position = 681
+      ratio = 0.500367376929
+      type = HPaned
+    [[[child3]]]
+      order = 0
+      parent = child2
+      position = 325
+      ratio = 0.500770416025
+      type = VPaned
+    [[[terminal4]]]
+      command = cd ~/slam/rovio_ws; zsh
+      directory = ""
+      order = 0
+      parent = child3
+      profile = new
+      type = Terminal
+      uuid = cde0a7e9-b758-4cf0-88f3-27e371965a77
+    [[[terminal5]]]
+      command = cd ~/slam/rovio_ws; zsh
+      order = 1
+      parent = child3
+      profile = new
+      type = Terminal
+      uuid = cd8236a7-33f4-427a-b12e-19dd03e95ab5
+    [[[terminal6]]]
+      command = cd ~/slam/rovio_ws; zsh
+      order = 1
+      parent = child2
+      profile = new
+      type = Terminal
+      uuid = ec00ea68-13c7-4741-8e00-f59f577ea587
+    [[[terminal7]]]
+      command = cd ~/slam/rovio_ws; zsh
+      directory = ""
+      order = 1
+      parent = child1
+      profile = new
+      type = Terminal
+      uuid = 4869af4f-69c6-4fd0-9e84-55540ef06bbe
+[plugins]
 [profiles]
   [[default]]
-    background_color = "#073642"
-    background_darkness = 0.73
+    background_color = "#303032"
+    background_darkness = 1.0
     background_type = transparent
     copy_on_selection = True
     cursor_color = "#dddddd"
-    show_titlebar = True
-    titlebars = yes
-[layouts]
-  [[default]]
-    [[[window0]]]
-      type = Window
-      parent = ""
-      position = 170:0
-            [[[main]]]
-              type = HPaned
-              parent = window0
-              profile = default
-            [[[child1]]]
-              type = VPaned
-              parent = main
-            [[[child2]]]
-              type = VPaned
-              parent = main
-            [[[terminal1]]]
-                profile = default
-                type = Terminal
-                order = 0
-                parent = child1
-                command = cd ~/slam/slambook; zsh
-            [[[terminal2]]]
-                profile = default
-                type = Terminal
-                order = 1
-                parent = child1
-            [[[terminal3]]]
-                profile = default
-                type = Terminal
-                order = 0
-                parent = child2
-                command = cd ~/slam/slambook; zsh
-            [[[terminal4]]]
-                profile = default
-                type = Terminal
-                order = 1
-                parent = child2
-                command = exit; bash
-[plugins]
+    palette = "#000000:#cc0000:#4e9a06:#c4a000:#3465a4:#75507b:#06989a:#d3d7cf:#555753:#ef2929:#8ae234:#fce94f:#729fcf:#ad7fa8:#34e2e2:#eeeeec"
+    scrollback_lines = 50000
+    show_titlebar = False
+  [[new]]
+    background_color = "#303032"
+    background_darkness = 1.0
+    background_type = transparent
+    copy_on_selection = True
+    cursor_color = "#dddddd"
+    scrollback_lines = 50000
+    show_titlebar = False
