@@ -37,7 +37,7 @@
       profile = default
       type = Terminal
     [[[terminal4]]]
-      command = exit; bash
+      command = exit; zsh
       order = 1
       parent = child2
       profile = default
