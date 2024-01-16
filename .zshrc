@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/aqiu/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -66,10 +66,17 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  macos
+  colored-man-pages
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  z
   autojump
+  sublime
 )
 
-[[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
+# [[ -s ~/.autojump/etc/profile.d/autojump.zsh ]] && . ~/.autojump/etc/profile.d/autojump.zsh
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,6 +109,10 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+  alias vi='nvim'
+fi
 
 alias cls='clear'
 alias ll='ls -l'
@@ -132,4 +143,32 @@ E=$'\x1b'
 # 右边的提示
 RPS1="%(1j.%{${E}[1;33m%}%j .)%{${E}[m%}%T"
 unset E
+
+lg()
+{
+    export LAZYGIT_NEW_DIR_FILE=~/.lazygit/newdir
+
+    lazygit "$@"
+
+    if [ -f $LAZYGIT_NEW_DIR_FILE ]; then
+        cd "$(cat $LAZYGIT_NEW_DIR_FILE)"
+        rm -f $LAZYGIT_NEW_DIR_FILE > /dev/null
+    fi
+}
+
+
+export GNUTERM="qt font \"Helvetica\""
+
+
+#eval $(docker-machine env prl-dev)
+
+# 如果没有指定，则自动选择颜色
+export LS_OPTIONS='--color=auto'
+
+# 是否输出颜色
+export CLICOLOR='Yes'
+
+# 指定颜色
+export LSCOLORS='CxfxcxdxbxegedabagGxGx'
+
 
