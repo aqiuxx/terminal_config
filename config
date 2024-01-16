@@ -17,7 +17,7 @@
       profile = default
       type = VPaned
     [[[terminal1]]]
-      command = cd ~/slam/slambook; zsh
+      command = cd ~; zsh
       order = 0
       parent = child1
       profile = default
@@ -31,7 +31,7 @@
       ratio = 0.3
       type = Terminal
     [[[terminal3]]]
-      command = cd ~/slam/slambook; zsh
+      command = cd ~; zsh
       order = 0
       parent = child2
       profile = default
