@@ -173,5 +173,5 @@ export CLICOLOR='Yes'
 # 指定颜色
 export LSCOLORS='CxfxcxdxbxegedabagGxGx'
 
-# source  /opt/ros/foxy/setup.bash
-source  /opt/ros/noetic/setup.bash
+# source  /opt/ros/foxy/setup.zsh
+source  /opt/ros/noetic/setup.zsh
