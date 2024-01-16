@@ -79,7 +79,7 @@ plugins=(
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 source $ZSH/oh-my-zsh.sh
-source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-lighlighting.zsh
+source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # User configuration
