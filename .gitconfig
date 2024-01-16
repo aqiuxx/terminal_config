@@ -21,7 +21,7 @@
     ; clash
     ;proxy = socks://127.0.0.1:7890
     ; ghelper
-    proxy = socks://127.0.0.1:9981
+    ; proxy = socks://127.0.0.1:9981
 [https]
     ; proxy = https://127.0.0.1:1087
     ; proxy = socks5://127.0.0.1:1080
@@ -30,4 +30,4 @@
     ; clash
     ;proxy = socks://127.0.0.1:7890
     ; ghelper
-    proxy = socks://127.0.0.1:9981
+    ; proxy = socks://127.0.0.1:9981
